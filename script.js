@@ -14,6 +14,9 @@ let envelope = document.querySelector('.envelope');
 let confetti = document.querySelector('#confetti-holder');
 var closed = true;
 
+
+letter.style.onclick = ()=> window.open("google.com");
+
 function start(){
   document.getElementById("overlay").style.display = "none";
 confetti.addEventListener('click', ()=>{
