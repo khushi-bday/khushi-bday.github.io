@@ -12,6 +12,22 @@ let flip = document.querySelector('.flip');
 let letter = document.querySelector('.letter');
 let envelope = document.querySelector('.envelope');
 let confetti = document.querySelector('#confetti-holder');
+var closed = true;
+
+function start(){
+  document.getElementById("overlay").style.display = "none";
+confetti.addEventListener('click', ()=>{
+  if (closed){
+    open();
+    closed = false;
+  } else {
+    close();
+    closed = true;
+  }
+});
+  document.getElementById('song').play();
+}
+document.getElementById("overlay").onclick = start;
 
 
 //open
@@ -27,7 +43,6 @@ function open(){
     confetti.style.zIndex = '6';
 	},400);
 }
-var closed = true;
 //close
 function close(){
 	letter.classList.remove('letterOpen');
@@ -42,14 +57,5 @@ function close(){
 	},300);
 }
 
-  var msgContainer = document.getElementById("msg");
-document.body.addEventListener('click', ()=>{
-  if (closed){
-    open();
-    closed = false;
-  } else {
-    close();
-    closed = true;
-  }
-});
+
 }
