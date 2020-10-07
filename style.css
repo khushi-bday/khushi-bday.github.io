@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
 body,html {
   margin: 0;
    position: relative;
+   font-family: 'Nanum Pen Script', cursive;
 }
 
 #confetti-holder {
