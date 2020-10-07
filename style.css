@@ -1,0 +1,195 @@
+body,html {
+  margin: 0;
+   position: relative;
+}
+
+#confetti-holder {
+  position: absolute;
+  top:0;
+  z-index:15;
+
+}
+#dancefloor{
+
+  position: fixed;
+  bottom: 0;
+}
+#hi {
+  position: fixed;
+  top: 10%;
+  left:0;
+}
+.minions{
+
+}
+
+.letter {
+  text-align: center;
+}
+.letter p{
+  padding: 0 15px;
+  font-size: small;
+}
+
+.container, .envelope, .flip, .letter, .text, .text:before, .text:after {
+  position: absolute;
+}
+
+#msg{
+  height: 280px;
+  width: 340px;
+  margin: auto;
+  position: relative;
+  top: 100px;
+}
+
+.container {
+  background: #ddd;
+  border-radius: 6px;
+  box-shadow: 0px 0px 3px #000;
+}
+
+.envelope {
+  border-top: 140px solid transparent;
+  border-left: 170px solid #fa565a;
+  border-bottom: 140px solid #fa565a;
+  border-right: 170px solid #ed4c50;
+  border-radius: 6px;
+  z-index: 9;
+}
+
+.flip {
+  top: 0;
+  left: 0;
+  border-top: 140px solid #c94548;
+  border-left: 170px solid transparent;
+  border-bottom: 140px solid transparent;
+  border-right: 170px solid transparent;
+  border-radius: 6px;
+  z-index: 6;
+}
+
+.letter {
+  top: 0px;
+  left: 2px;
+  height: 280px;
+  width: 340px;
+  background: #ffdede;
+  border-radius: 6px;
+  z-index: 5;
+}
+
+.text {
+  top: 10px;
+  left: 12px;
+  height: 6px;
+  width: 100px;
+  background: #b0b0b0;
+}
+
+.text:before, .text:after {
+  content: '';
+  height: 100%;
+  background: #b0b0b0;
+  left: 0px;
+}
+
+.text:before {
+  top: 10px;
+  width: 50px;
+}
+
+.text:after {
+  top: 20px;
+  width: 65px;
+}
+
+/*Classes to be Added and removed*/
+.open {
+  animation: flipOpen 0.4s ease-in forwards;
+}
+
+.close {
+  animation: flipClose .4s ease-in forwards;
+}
+
+.letterOpen {
+  top: -100px;
+  transition: .3s ease-in;
+}
+
+.envelopOpen {
+  top: 80px;
+  transition: .3s ease-in;
+}
+.envelopClose {
+  top: 0;
+  transition: .3s ease-in;
+}
+
+.letterClose {
+  top: 0px;
+  transition: .3s ease-in;
+}
+
+@keyframes flipOpen {
+  0% {
+    transform: rotateX(0deg);
+    transform-origin: center top;
+  }
+  100% {
+    transform: rotateX(180deg);
+    transform-origin: center top;
+  }
+}
+@keyframes flipClose {
+  0% {
+    transform: rotateX(180deg);
+    transform-origin: center top;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: center top;
+  }
+}
+
+@media (min-width: 320px) {
+
+  .minions {
+    height: 80px;
+  }
+  #msg{
+    top: 220px;
+  }
+
+}
+@media (min-width: 350px) {
+
+  .minions {
+    height: 90px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .minions {
+    height: 170px;
+  }
+  #msg{
+    top: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .minions {
+    height: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .minions {
+    height: 300px;
+  }
+}
